@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Швидкі кредити онлайн в Україні | Найкращі пропозиції</title>
+    <title>Швидкі кредити онлайн в Україні | Найкращі МФО 2026</title>
+    <!-- Фавікон сайту -->
+    <link rel="icon" type="image/jpeg" href="https://i.postimg.cc/0Q0VyT3f/fav-1kred.jpg">
     <style>
         :root {
-            --primary-color: #2563eb;
-            --primary-hover: #1d4ed8;
-            --bg-color: #f8fafc;
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --success: #059669;
+            --success-bg: #ecfdf5;
+            --bg-body: #f8fafc;
             --card-bg: #ffffff;
-            --text-color: #1e293b;
+            --text-main: #334155;
             --text-muted: #64748b;
-            --border-color: #e2e8f0;
-            --accent-color: #10b981;
+            --border: #e2e8f0;
+            --radius: 14px;
         }
 
         * {
@@ -24,141 +29,191 @@
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            background-color: var(--bg-body);
+            color: var(--text-main);
             line-height: 1.6;
             padding: 20px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            padding-top: 20px;
         }
 
         header h1 {
-            font-size: 24px;
-            color: var(--text-color);
-            margin-bottom: 8px;
+            font-size: 28px;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 800;
         }
 
         header p {
             color: var(--text-muted);
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .promo-banner {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 20px 24px;
+            border-radius: var(--radius);
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+        }
+
+        .promo-banner h2 {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+
+        .promo-banner p {
             font-size: 14px;
+            opacity: 0.9;
         }
 
         .offers-grid {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 24px;
         }
 
         .card {
             background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.06);
         }
 
         .card-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 12px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
         }
 
         .card-title {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 700;
-            color: var(--primary-color);
+            color: var(--primary);
         }
 
         .badge {
-            background-color: #ecfdf5;
-            color: var(--accent-color);
-            font-size: 12px;
+            background-color: var(--success-bg);
+            color: var(--success);
+            font-size: 13px;
             font-weight: 600;
-            padding: 4px 8px;
-            border-radius: 6px;
+            padding: 6px 12px;
+            border-radius: 20px;
         }
 
-        .card-details {
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-muted);
             margin-bottom: 16px;
+        }
+
+        .params-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .params-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--border);
             font-size: 14px;
         }
 
-        .card-details ul {
-            list-style: none;
+        .params-list li:last-child {
+            border-bottom: none;
         }
 
-        .card-details li {
-            margin-bottom: 6px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .card-details span.label {
+        .params-list .label {
             color: var(--text-muted);
         }
 
-        .card-details span.value {
+        .params-list .value {
             font-weight: 600;
+            color: var(--primary);
             text-align: right;
         }
 
-        .links-section {
+        .docs-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 16px;
+            gap: 12px;
+            margin-bottom: 20px;
             font-size: 13px;
         }
 
-        .links-section a {
-            color: var(--primary-color);
+        .docs-links a {
+            color: var(--accent);
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
         }
 
-        .links-section a:hover {
+        .docs-links a:hover {
             text-decoration: underline;
         }
 
         .btn {
             display: block;
             width: 100%;
-            background-color: var(--primary-color);
+            background-color: var(--accent);
             color: white;
             text-align: center;
-            padding: 12px;
-            border-radius: 8px;
+            padding: 14px;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 16px;
             transition: background-color 0.2s;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
         }
 
         .btn:hover {
-            background-color: var(--primary-hover);
+            background-color: var(--accent-hover);
         }
 
         footer {
             text-align: center;
-            margin-top: 40px;
-            font-size: 12px;
+            margin-top: 50px;
+            font-size: 13px;
             color: var(--text-muted);
+            padding-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .card {
+                padding: 16px;
+            }
+            header h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
@@ -167,90 +222,107 @@
     <div class="container">
         <header>
             <h1>Швидкі кредити онлайн в Україні</h1>
-            <p>Обирайте перевірені мікрофінансові організації та оформлюйте позики за лічені хвилини</p>
+            <p>Порівнюйте найкращі умови мікрофінансових організацій, обирайте ставки від 0.01% та отримуйте гроші на картку за 5-10 хвилин.</p>
         </header>
+
+        <div class="promo-banner">
+            <h2>🔥 Акція на перший кредит</h2>
+            <p>Більшість сервісів надають позику під 0.01% — 0.1% на день для нових клієнтів!</p>
+        </div>
 
         <div class="offers-grid">
 
-            <!-- 1. Твоя Позика UA -->
+            <!-- 1. SelfieCredit -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">SelfieCredit UA</span>
+                    <span class="badge">Автозаповнення по селфі</span>
+                </div>
+                <div class="card-desc">
+                    Сервіс швидкого онлайн-кредитування нового покоління. Автоматична обробка заявок 24/7 та миттєве зарахування на картку.
+                </div>
+                <ul class="params-list">
+                    <li><span class="label">Перший кредит:</span> <span class="value">до 30 000 грн (від 0,01%)</span></li>
+                    <li><span class="label">Повторний кредит:</span> <span class="value">до 50 000 грн</span></li>
+                    <li><span class="label">Строк кредитування:</span> <span class="value">від 345 до 365 днів</span></li>
+                    <li><span class="label">Річна ставка (РРПС):</span> <span class="value">від 1244,55% до 3422,24%</span></li>
+                </ul>
+                <div class="docs-links">
+                    <a href="https://selfiecredit.com.ua/docs/characteristics.pdf" target="_blank">📄 Істотні характеристики</a>
+                    <a href="https://selfiecredit.com.ua" target="_blank">⚠️ Попередження про наслідки</a>
+                </div>
+                <a href="https://rdr.salesdoubler.com.ua/in/offer/2816?aid=114147" target="_blank" class="btn">Отримати гроші в SelfieCredit</a>
+            </div>
+
+            <!-- 2. Твоя Позика -->
             <div class="card">
                 <div class="card-header">
                     <span class="card-title">Твоя Позика UA</span>
-                    <span class="badge">Онлайн 24/7</span>
+                    <span class="badge">Зручний графік</span>
                 </div>
-                <div class="card-details">
-                    <ul>
-                        <li><span class="label">Сума кредиту:</span> <span class="value">від 1 000 до 150 000 грн</span></li>
-                        <li><span class="label">Строк:</span> <span class="value">від 113 до 360 днів</span></li>
-                        <li><span class="label">Ставка:</span> <span class="value">від 0,01% до 1% на день</span></li>
-                        <li><span class="label">РРПС:</span> <span class="value">від 2 691,52% до 10 376,34%</span></li>
-                    </ul>
+                <div class="card-desc">
+                    Простий інтерфейс та швидка обробка заявок. Фіксований термін кредиту, погашення рівними частинами раз на тиждень (кредит на 8 тижнів).
                 </div>
-                <a href="https://go.salesdoubler.net/in/offer/2641?aid=114147" target="_blank" class="btn">Отримати кредит</a>
+                <ul class="params-list">
+                    <li><span class="label">Сума кредиту:</span> <span class="value">від 1 000 до 150 000 грн</span></li>
+                    <li><span class="label">Строк:</span> <span class="value">від 113 до 360 днів</span></li>
+                    <li><span class="label">Процентна ставка:</span> <span class="value">від 0,01% до 1% на день</span></li>
+                    <li><span class="label">РРПС:</span> <span class="value">від 2 691,52% до 10 376,34%</span></li>
+                </ul>
+                <div class="docs-links">
+                    <a href="https://tpozyka.com/publichnaya-informacziya-o-kompanii/#for-nbu" target="_blank">📄 Істотні характеристики послуги</a>
+                    <a href="https://tpozyka.com/poperedzhennya_nbu.pdf" target="_blank">⚠️ Попередження про наслідки</a>
+                </div>
+                <a href="https://go.salesdoubler.net/in/offer/2641?aid=114147" target="_blank" class="btn">Отримати гроші в Твоя Позика</a>
             </div>
 
-            <!-- 2. Швидко Гроші UA -->
+            <!-- 3. ШвидкоГроші -->
             <div class="card">
                 <div class="card-header">
-                    <span class="card-title">Швидко Гроші UA</span>
-                    <span class="badge">Популярне</span>
+                    <span class="card-title">ШвидкоГроші UA</span>
+                    <span class="badge">Лідер ринку 10 років</span>
                 </div>
-                <div class="card-details">
-                    <ul>
-                        <li><span class="label">Максимальна сума:</span> <span class="value">до 100 000 грн</span></li>
-                        <li><span class="label">Максимальний строк:</span> <span class="value">до 395 днів</span></li>
-                        <li><span class="label">Річна ставка (РРПС):</span> <span class="value">від 631% до 11 016,79%</span></li>
-                    </ul>
+                <div class="card-desc">
+                    Моментальні кредити без застави та поручителів. Довіра у всій країні та видача коштів всього за 20 хвилин.
                 </div>
-                <div class="links-section">
-                    <a href="https://sgroshi.com.ua/storage/app/public/docs/essential_characteristics/essential_characteristics.pdf" target="_blank">📄 Істотні характеристики</a> | 
+                <ul class="params-list">
+                    <li><span class="label">1-й кредит (до 6 000 грн):</span> <span class="value">від 0,01% на день</span></li>
+                    <li><span class="label">Максимальна сума:</span> <span class="value">до 100 000 грн</span></li>
+                    <li><span class="label">Максимальний строк:</span> <span class="value">до 395 днів</span></li>
+                    <li><span class="label">РРПС:</span> <span class="value">від 631% до 11 016,79%</span></li>
+                </ul>
+                <div class="docs-links">
+                    <a href="https://sgroshi.com.ua/storage/app/public/docs/essential_characteristics/essential_characteristics.pdf" target="_blank">📄 Істотні характеристики</a>
                     <a href="https://sgroshi.com.ua/ua/rozkritta-informacii/#warning" target="_blank">⚠️ Попередження для користувача</a>
                 </div>
-                <a href="https://rdr.fmcgsd.net/in/offer/2793?aid=114147" target="_blank" class="btn">Отримати кредит</a>
+                <a href="https://rdr.fmcgsd.net/in/offer/2793?aid=114147" target="_blank" class="btn">Отримати гроші в ШвидкоГроші</a>
             </div>
 
-            <!-- 3. StarFin UA -->
+            <!-- 4. Starfin -->
             <div class="card">
                 <div class="card-header">
-                    <span class="card-title">StarFin UA</span>
+                    <span class="card-title">Starfin UA</span>
                     <span class="badge">Продукт "Зірковий"</span>
                 </div>
-                <div class="card-details">
-                    <ul>
-                        <li><span class="label">Сума кредиту:</span> <span class="value">від 500 до 50 000 грн</span></li>
-                        <li><span class="label">Строк:</span> <span class="value">365 днів (з достроковим погашенням)</span></li>
-                        <li><span class="label">Реальна річна ставка:</span> <span class="value">від 2258,11% до 2895,10%</span></li>
-                    </ul>
+                <div class="card-desc">
+                    Зручний сервіс кредитування 24/7. Високий відсоток схвалення заявок та швидке зарахування коштів на будь-яку банківську картку.
                 </div>
-                <div class="links-section">
+                <ul class="params-list">
+                    <li><span class="label">Сума кредиту:</span> <span class="value">від 500 до 50 000 грн</span></li>
+                    <li><span class="label">Строк:</span> <span class="value">365 днів (з правом дострокового погашення)</span></li>
+                    <li><span class="label">Реальна річна ставка:</span> <span class="value">від 2258,11% до 2895,10%</span></li>
+                    <li><span class="label">Графік роботи:</span> <span class="value">Цілодобово 24/7</span></li>
+                </ul>
+                <div class="docs-links">
                     <span>Контакти: 0 800 20 22 33 | info@starfin.com.ua</span>
                 </div>
-                <a href="https://go.salesdoubler.net/in/offer/5706?aid=114147" target="_blank" class="btn">Отримати кредит</a>
-            </div>
-
-            <!-- 4. Mycredit UA -->
-            <div class="card">
-                <div class="card-header">
-                    <span class="card-title">Mycredit UA</span>
-                    <span class="badge">Вигідний перший кредит</span>
-                </div>
-                <div class="card-details">
-                    <ul>
-                        <li><span class="label">Сума (1-й / пов.):</span> <span class="value">до 30 000 / 50 000 грн</span></li>
-                        <li><span class="label">Максимальний строк:</span> <span class="value">до 365 днів</span></li>
-                        <li><span class="label">РРПС (1-й кредит):</span> <span class="value">від 1265,80% до 2989,62%</span></li>
-                        <li><span class="label">РРПС (повторний):</span> <span class="value">від 1259,21% до 3549,15%</span></li>
-                    </ul>
-                </div>
-                <div class="links-section">
-                    <a href="https://mycredit.ua/media/downloads/pravova-info/doc_213.pdf" target="_blank">📄 Істотні характеристики послуги</a>
-                </div>
-                <a href="https://rdr.fmcgsd.net/in/offer/2681?aid=114147" target="_blank" class="btn">Отримати кредит</a>
+                <a href="https://go.salesdoubler.net/in/offer/5706?aid=114147" target="_blank" class="btn">Отримати гроші в Starfin</a>
             </div>
 
         </div>
 
         <footer>
+            <p>Регулювання фінансової діяльності контролюється Національним банком України. Всі послуги ліцензовані.</p>
             <p>&copy; 2026 Всі права захищені. Інформаційний сервіс підбору кредитів.</p>
         </footer>
     </div>
